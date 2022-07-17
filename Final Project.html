@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Let's take care of your hormons</title>
+    <style>
+      .conteiner {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      h1,
+      h2 {
+        text-align: center;
+        color: rgb(58, 56, 69);
+      }
+      h1 {
+        border: 0px solid rgb(198, 155, 123);
+        padding: 10px;
+        border-radius: 5px;
+      }
+      h1:hover {
+        background-color: rgb(247, 204, 172);
+        color: rgb(58, 56, 69);
+        border-radius: 5px;
+        transition: all 200ms ease-in-out;
+      }
+      .emoji {
+        font-size: 35px;
+        color: transparent;
+        text-shadow: 0 0 0 rgb(198, 155, 123);
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 90%;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      ul {
+        padding: 20px;
+        display: block;
+        margin: 20 auto;
+        line-height: 1.5;
+        text-align: center;
+        list-style-type: none;
+        padding: 0px;
+        font-size: 20px;
+        font-weight: bold;
+      }
+      li {
+        color: rgb(198, 155, 123);
+      }
+
+      .diet:hover {
+        background-color: rgb(198, 155, 123, 0.7);
+        transition: all 200ms ease-in-out;
+      }
+      .life:hover {
+        background-color: rgb(198, 155, 123, 0.5);
+        transition: all 200ms ease-in-out;
+      }
+      .supl:hover {
+        background-color: rgb(198, 155, 123, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+
+      img {
+        border-radius: 5px;
+        border-right: 2px rgb(198, 155, 123, 0.8) solid;
+        border-left: 2px rgb(58, 56, 69, 0.8) solid;
+        border-top: 2px rgb(58, 56, 69, 0.8) solid;
+        border-bottom: 2px rgb(198, 155, 123, 0.8) solid;
+      }
+      .moreinfo {
+        padding: 10px;
+        margin: 0px auto;
+        text-align: center;
+        color: rgb(58, 56, 69);
+        text-decoration: none;
+        font-size: 24px;
+        display: block;
+        margin: 10px auto;
+        background-color: rgb(198, 155, 123);
+        padding: 10px 5px 10px 5px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px 1px rgb(130, 111, 102);
+        border: #f7cdacc0;
+        transition: all 200ms ease-in-out;
+        max-width: 200px;
+      }
+      .moreinfo:hover {
+        text-decoration: underline;
+        background-color: rgb(198, 155, 123, 0.8);
+      }
+      .you {
+        font-size: 24px;
+        display: block;
+        margin: 10px auto;
+        background-color: rgb(130, 111, 102);
+        padding: 10px 5px 10px 5px;
+        border-radius: 5px;
+        box-shadow: 1px 1px 1px 1px rgb(130, 111, 102);
+        border: #f7cdacc0;
+        transition: all 200ms ease-in-out;
+      }
+      .you:hover {
+        background-color: rgb(198, 155, 123, 0.5);
+        cursor: pointer;
+      }
+      p2 {
+        text-align: center;
+        display: block;
+        margin: 10px auto;
+      }
+      body {
+        background: linear-gradient(
+          134deg,
+          rgb(198, 155, 123) 34%,
+          rgb(198, 155, 123) 39%,
+          rgb(58, 56, 69) 65%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>PCOS</h1>
+      <h2 class="heading">Let's take care of your hormons</h2>
+      <h2 class="heart">🖤</h2>
+      <button class="you">About you</button>
+
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/038/211/original/girls.jpg?1655985636"
+        alt="PCOS"
+        width="600"
+      />
+      <div class="list">
+        <ul>
+          <a
+            style="text-decoration: none"
+            href="https://pubmed.ncbi.nlm.nih.gov/18097891/"
+          >
+            <li class="diet">Diet</li>
+          </a>
+          <a
+            style="text-decoration: none"
+            href="https://pubmed.ncbi.nlm.nih.gov/34371961/"
+          >
+            <li class="life">Life style</li>
+          </a>
+          <a
+            style="text-decoration: none"
+            href="https://pubmed.ncbi.nlm.nih.gov/29946756/"
+          >
+            <li class="supl">Suplementation</li>
+          </a>
+        </ul>
+      </div>
+      <h3>
+        <a
+          href="https://www.instagram.com/aveline_gacek/"
+          target="_blank"
+          class="moreinfo"
+        >
+          More info
+        </a>
+      </h3>
+      <p2>This page was built by Aveline</p2>
+      <script>
+        function ask() {
+          let name = prompt("What is your name Beautiful Person?");
+          let sex = prompt("Do you identify yourself as a woman?");
+          sex = sex.toLowerCase();
+          sex = sex.trim();
+
+          let heading = document.querySelector(".heading");
+          heading.innerHTML = "Let's take care of your hormons " + name;
+          if (sex === "yes") {
+            let emoji = document.querySelector(".heart");
+            emoji.innerHTML = "💜";
+          } else {
+            heading.innerHTML =
+              "Sorry, " +
+              name +
+              " it's not allowed for you to be a participant";
+          }
+        }
+        let changeButton = document.querySelector(".you");
+        changeButton.addEventListener("click", ask);
+      </script>
+    </div>
+  </body>
+</html>
